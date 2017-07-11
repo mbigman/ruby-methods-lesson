@@ -1,4 +1,4 @@
-# Ruby Methods - Full Lecture
+# Ruby Methods
 
 ## Objective
 ***Students will be able to create and use their own custom methods***
@@ -22,24 +22,12 @@
 + METHODS - create a custom method using arguments
 
 ## Motivation
-+ Remember the cool drone we played with on day 1? We gave it commands using methods. [Show the class some of the code.] 
-```ruby
-	drone.take_off
-	sleep 5
-	drone.turn_right(1.0)
-	sleep 5
-	drone.turn_left(1.0)
-	sleep 5 
-	drone.hover.land [chaining]
-	sleep 5
-	drone.stop
-```
+
 + Coding becomes powerful when you start writing your own methods like the ones used to control the drone. Soon you will know enough about methods to create your own drone army.
 
 
-## Lesson Plan 
+
 + A method is just a set of instructions that tells the computer to do something. They are awesome because they allow us to write code ONCE and then re-use it as many times as we want! 
-+ Call out someone in the class and start giving them commands. Write them on the board
 	```
 	Close your computer
 	Put it in your bag
@@ -65,14 +53,8 @@ def go_home
 	puts “Go to your house”
 end
 ```
-+ Try saving this and running it. Nothing happens. Ask if anyone knows why? Have the students discuss.
++ Try saving this and running it. Nothing happens. 
 + Defining a method is like telling the computer how to do something, but then we need to also call the method to make the computer execute that code. 
-+ For example: who plays an instrument? Great! You contain the instructions on how to play the instrument inside of you. It’s almost as if you have a play_instrument method in your brain, but is only activated when we say - please play_instrument. 
-+ If class has trouble with this analogy try the dictionary analogy - a dictionary contains the definitions of all the words, but we don’t use these definition until we are actually saying the words or using them in a sentence.
-+ We call methods by writing the method name when we want to use it. Add call to the file and run it to show the class. 
-+ ***Write a few more methods with class:*** How old will I be in 10 years? What is my name spelled backwards. Change all w’s to v’s.
-* ***Break and have them write and call methods in a lab***
-	+ https://github.com/learn-co-curriculum/hs-ruby-2-methods-practice-lab 
 
 + Every method that we write gives us something called a return value - this is what Ruby evaluates for us and gives us back to use in other parts of our program. The return value of our methods is the last line evaluated. 
 + What would the return value of these methods be?
@@ -159,8 +141,6 @@ end
 And how would we call this? `say_name(“Vanessa”)`, `say_name(“Victoria”)`
 
 + When you call this method you can feed it any string that you want as the name - but remember it has to be a string.
-+ Everyone open up your text editor and write out this method and try calling it with different names.
-	+ Say thing from CLI
 + Methods don’t always have to take in strings though. They can also take in numbers and multiple arguments at one time.
 For example:
 ```ruby
@@ -178,8 +158,7 @@ def addition(number_1, number_1)
 end
 puts addition(2, 3)
 ```
-***Your turn to practice with a lab!***
-https://github.com/learn-co-curriculum/hs-ruby-2-parrot-lab
+
 + We can also set default values for our arguments like this:
 
 ```ruby
@@ -187,9 +166,7 @@ https://github.com/learn-co-curriculum/hs-ruby-2-parrot-lab
 		puts “Hello #{name}!”
 	end
 ```
-+ What do you think happens when I call this method with no arguments? Show the class.
-+ Practice with a mini-lab 
-	+ https://github.com/learn-co-curriculum/hs-ruby-2-meal-choice-lab
+
 Why do we have to feed arguments into a method anyway? Why can’t we do this:
 + What if instead of feeding in an argument for name we just defined name at the top of the file. Like this:
 
@@ -203,7 +180,7 @@ Why do we have to feed arguments into a method anyway? Why can’t we do this:
 + Let’s try running this file. 
 + What does this error message mean? `undefined local variable or method 'name'`
 + The method doesn’t recognize the variable name. That is because a method creates its own world. 
-+ ***Draw circles on the board. The big circle is the program. The small circle is the method. The method is only aware of what is in the small circle.***
+
 + In this example the name variable lives outside of this world, so say_hello doesn’t even know it exists. Let’s try defining name inside of the method. This works!
 
 ```ruby
@@ -228,16 +205,3 @@ puts “hello #{name}”
 + Why does it print both “Hello Bob” and “Hello Joe”? Why in that order?
 + What we just talked about is called scope. It is not so important for simple labs like the ones we are doing now, but it will become very important later. Don’t forget about scope! 
 + For now, just remember that you’ll need to feed information into a method with an argument. Otherwise your method will not know what you are talking about.
-
-
-## Conclusion 
-+ Now you know: 
-	+ how to write your own methods
-	+ where to look for pre-written ruby methods (in ruby 	documentation)
-	+ the return values of methods
-	+ how to write and call methods with arguments
-	+ what scope is
-
-
-## Hints and Hurdles 
-+ For method arguments: Ask the class "What if I told you to dye my hair, is that enough instructions for you to do anything?" - Usually students say no, they need to know what color. The color, "blue" is an argument, its the additional piece of information that could change, but is needed to complete the task
