@@ -129,7 +129,7 @@ def go_for_lunch(location)
 	puts “Go to #{location} to pick up lunch”
 end
 ```
-+ Where would you guys like to send out our student? ***Get a location from the class.***
+
 + Arguments allow us to pass information into a method and makes our code more flexible and reusable. 
 + Let’s do another example. What if I wanted to write a program that says hello to everyone in the classroom. Help me write this.
 
